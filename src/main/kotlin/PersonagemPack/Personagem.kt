@@ -22,4 +22,10 @@ open class Personagem() {
     val modificador = (floor(charHabilidade.toFloat() - 10) / 2)
     return modificador + charHabilidade
   }
+
+  fun modificadorVida(charHabilidade: Int): Float {
+    val modificador = (floor(charHabilidade.toFloat() - 10) / 2)
+    return modificador
+  }
 }
+
