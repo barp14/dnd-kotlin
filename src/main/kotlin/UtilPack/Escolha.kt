@@ -161,8 +161,8 @@ open class Escolha {
             print("\nForça: ")
             val digitadoForca = readln().toInt()
 
-            if (digitadoForca <= pontos && digitadoForca >= 0 && digitadoForca <= 15) {
-              char.forca = char.modificadorHabilidade((8 + digitadoForca) + char.raca.buffForca).toInt()
+            if (digitadoForca <= pontos && digitadoForca >= 0 && digitadoForca <= 7) {
+              char.forca = Util.modificadorHabilidade((8 + digitadoForca) + char.raca.buffForca).toInt()
               pontos = LimitadorPontos.diminuirPontos(pontos, digitadoForca)
               println("Pontos restantes: " + pontos)
               break
@@ -175,8 +175,8 @@ open class Escolha {
             print("Destreza: ")
             val digitadoDestreza: Int = readln().toInt()
 
-            if (digitadoDestreza <= pontos && digitadoDestreza in 0..15) {
-              char.destreza = char.modificadorHabilidade((8 + digitadoDestreza) + char.raca.buffDestreza).toInt()
+            if (digitadoDestreza <= pontos && digitadoDestreza in 0..7) {
+              char.destreza = Util.modificadorHabilidade((8 + digitadoDestreza) + char.raca.buffDestreza).toInt()
               pontos = LimitadorPontos.diminuirPontos(pontos, digitadoDestreza)
               println("Pontos restantes: " + pontos)
               break
@@ -189,11 +189,12 @@ open class Escolha {
             print("Constituição: ")
             val digitadoConstituicao: Int = readln().toInt()
 
-            if (digitadoConstituicao <= pontos && digitadoConstituicao in 0..15) {
-              char.constituicao = char.modificadorHabilidade((8 + digitadoConstituicao) + char.raca.buffConstituicao).toInt()
+            if (digitadoConstituicao <= pontos && digitadoConstituicao in 0..7) {
+              char.constituicao = Util.modificadorHabilidade((8 + digitadoConstituicao) + char.raca.buffConstituicao).toInt()
               pontos = LimitadorPontos.diminuirPontos(pontos, digitadoConstituicao)
 
-              char.vida = char.classe.vidaClasse + char.modificadorVida((char.constituicao)).toInt()
+              // definindo a vida junto com a constiuição por conta do modificador
+              char.vida = char.classe.vidaClasse + Util.modificadorVida((char.constituicao)).toInt()
 
               println("Pontos restantes: " + pontos)
               break
@@ -206,8 +207,8 @@ open class Escolha {
             print("Inteligencia: ")
             val digitadoInteligencia: Int = readln().toInt()
 
-            if (digitadoInteligencia <= pontos && digitadoInteligencia in 0..15) {
-              char.inteligencia = char.modificadorHabilidade((8 + digitadoInteligencia) + char.raca.buffInteligencia).toInt()
+            if (digitadoInteligencia <= pontos && digitadoInteligencia in 0..7) {
+              char.inteligencia = Util.modificadorHabilidade((8 + digitadoInteligencia) + char.raca.buffInteligencia).toInt()
               pontos = LimitadorPontos.diminuirPontos(pontos, digitadoInteligencia)
               println("Pontos restantes: " + pontos)
               break
@@ -220,8 +221,8 @@ open class Escolha {
             print("Sabedoria: ")
             val digitadoSabedoria: Int = readln().toInt()
 
-            if (digitadoSabedoria <= pontos && digitadoSabedoria in 0..15) {
-              char.sabedoria = char.modificadorHabilidade((8 + digitadoSabedoria) + char.raca.buffSabedoria).toInt()
+            if (digitadoSabedoria <= pontos && digitadoSabedoria in 0..7) {
+              char.sabedoria = Util.modificadorHabilidade((8 + digitadoSabedoria) + char.raca.buffSabedoria).toInt()
               pontos = LimitadorPontos.diminuirPontos(pontos, digitadoSabedoria)
               println("Pontos restantes: " + pontos)
               break
@@ -234,8 +235,8 @@ open class Escolha {
             print("Carisma: ")
             val digitadoCarisma: Int = readln().toInt()
 
-            if (digitadoCarisma <= pontos && digitadoCarisma in 0..15) {
-              char.carisma = char.modificadorHabilidade((8 + digitadoCarisma) + char.raca.buffCarisma).toInt()
+            if (digitadoCarisma <= pontos && digitadoCarisma in 0..7) {
+              char.carisma = Util.modificadorHabilidade((8 + digitadoCarisma) + char.raca.buffCarisma).toInt()
               pontos = LimitadorPontos.diminuirPontos(pontos, digitadoCarisma)
               println("Pontos restantes: " + pontos)
               break
@@ -249,13 +250,13 @@ open class Escolha {
       else if (escolhaHabilidade == 2){
 
         println("\nRoll the dices!")
-        char.forca = char.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffForca).toInt()
-        char.destreza = char.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffDestreza).toInt()
-        char.constituicao = char.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffConstituicao).toInt()
-        char.vida = char.classe.vidaClasse + char.modificadorVida((char.constituicao)).toInt()
-        char.inteligencia = char.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffInteligencia).toInt()
-        char.sabedoria = char.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffSabedoria).toInt()
-        char.carisma = char.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffCarisma).toInt()
+        char.forca = Util.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffForca).toInt()
+        char.destreza = Util.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffDestreza).toInt()
+        char.constituicao = Util.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffConstituicao).toInt()
+        char.vida = char.classe.vidaClasse + Util.modificadorVida((char.constituicao)).toInt()
+        char.inteligencia = Util.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffInteligencia).toInt()
+        char.sabedoria = Util.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffSabedoria).toInt()
+        char.carisma = Util.modificadorHabilidade(Util.rolagemAtributos() + char.raca.buffCarisma).toInt()
       }
     }
   }

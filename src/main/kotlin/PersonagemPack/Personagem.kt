@@ -18,14 +18,5 @@ open class Personagem() {
   var sabedoria: Int = 0
   var carisma: Int = 0
 
-  fun modificadorHabilidade(charHabilidade: Int): Float {
-    val modificador = (floor(charHabilidade.toFloat() - 10) / 2)
-    return modificador + charHabilidade
-  }
-
-  fun modificadorVida(charHabilidade: Int): Float {
-    val modificador = (floor(charHabilidade.toFloat() - 10) / 2)
-    return modificador
-  }
 }
 
