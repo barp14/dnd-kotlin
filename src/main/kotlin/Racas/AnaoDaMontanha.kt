@@ -1,7 +1,7 @@
 package Racas
 
 class AnaoDaMontanha : RacaPadrao {
-  override val nomeRaca: String = "Name"
+  override val nomeRaca: String = "Anão da Montanha"
 
   override val buffForca: Int = 2
   override val buffDestreza: Int = 0

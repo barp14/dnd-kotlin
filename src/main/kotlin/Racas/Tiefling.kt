@@ -1,7 +1,7 @@
 package Racas
 
 class Tiefling : RacaPadrao {
-  override val nomeRaca: String = "Name"
+  override val nomeRaca: String = "Tiefling"
 
   override val buffForca: Int = 0
   override val buffDestreza: Int = 0
