@@ -167,7 +167,7 @@ open class Escolha {
               println("Pontos restantes: " + pontos)
               break
             } else {
-              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 15. Tente novamente.")
+              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 7. Tente novamente.")
             }
           } while (true)
 
@@ -181,7 +181,7 @@ open class Escolha {
               println("Pontos restantes: " + pontos)
               break
             } else {
-              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 15. Tente novamente.")
+              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 7. Tente novamente.")
             }
           } while (true)
 
@@ -199,7 +199,7 @@ open class Escolha {
               println("Pontos restantes: " + pontos)
               break
             } else {
-              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 15. Tente novamente.")
+              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 7. Tente novamente.")
             }
           } while (true)
 
@@ -213,7 +213,7 @@ open class Escolha {
               println("Pontos restantes: " + pontos)
               break
             } else {
-              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 15. Tente novamente.")
+              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 7. Tente novamente.")
             }
           } while (true)
 
@@ -227,7 +227,7 @@ open class Escolha {
               println("Pontos restantes: " + pontos)
               break
             } else {
-              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 15. Tente novamente.")
+              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 7. Tente novamente.")
             }
           } while (true)
 
@@ -241,7 +241,7 @@ open class Escolha {
               println("Pontos restantes: " + pontos)
               break
             } else {
-              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 15. Tente novamente.")
+              println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 7. Tente novamente.")
             }
           } while (true)
         } while (pontos != 0 && pontos > 0)
