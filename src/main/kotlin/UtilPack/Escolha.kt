@@ -152,11 +152,11 @@ open class Escolha {
               "\nSua esolha: ")
       val escolhaHabilidade = readln().toInt()
 
+
       if (escolhaHabilidade == 1) {
 
-        var pontos: Int = 27
-
         do {
+          var pontos: Int = 27
           do {
             print("\nForça: ")
             val digitadoForca = readln().toInt()
