@@ -244,7 +244,7 @@ open class Escolha {
               println("Valor inserido é maior que os pontos disponíveis, menor que 0 ou maior que 7. Tente novamente.")
             }
           } while (true)
-        } while (pontos != 0 && pontos > 0)
+        } while (pontos != 0)
 
       }
       else if (escolhaHabilidade == 2){

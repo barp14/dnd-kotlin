@@ -4,5 +4,5 @@ import UtilPack.Dados
 
 class Artifice : ClassePadrao {
   override val nomeClasse: String = "Artifíce"
-  override var vidaClasse: Int = 10 + Dados.d10()
+  override var vidaClasse: Int = Dados.d10()
 }
